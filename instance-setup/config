@@ -1,0 +1,4 @@
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+EIP="eipalloc-803cb4e4"
+INTERFACE_ID="eni-c758498d"
+EBS="vol-405390f2"

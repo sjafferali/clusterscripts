@@ -1,0 +1,12 @@
+[Unit]
+Description=Checks if eth1 is online then starts corosync
+Wants=network-online.target
+After=elastic-network-interfaces.service
+
+[Service]
+Type=simple
+RemainAfterExit=true
+ExecStart=/opt/clusterscripts/bin/startcorosync.sh
+
+[Install]
+WantedBy=multi-user.target

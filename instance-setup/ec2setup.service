@@ -1,0 +1,12 @@
+[Unit]
+Description=Performs addtional EC2 configuration
+After=network-online.target syslog.target
+Before=elastic-network-interfaces.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/opt/instance-setup/setup.sh
+
+[Install]
+WantedBy=multi-user.target
