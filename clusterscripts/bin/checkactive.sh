@@ -10,7 +10,7 @@ blue="\033[0;34m"
 defclr="\033[0m"
 
 
-if [[ $(uname -n) == $ACTIVE ]]
+if [[ $(uname -n) == $ACTIVE  || $(hostname -s) == $ACTIVE ]]
 then
 	echo -e "$green You have logged on to the ACTIVE node. $defclr"
 else
